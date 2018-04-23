@@ -1,0 +1,12 @@
+﻿<Window x:Class="GridPrint.PrintPreview" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing" Title="PrintPreview" Height="300" Width="300">
+    <dxb:BarManager x:Name="barManager1">
+        <dxb:BarManager.Controllers>
+            <dxp:PrintPreviewBarManagerController PrintPreview="{Binding ElementName=printPreview1}" />
+        </dxb:BarManager.Controllers>
+        <DockPanel>
+            <dxb:BarContainerControl x:Name="TopContainer" DockPanel.Dock="Top" ContainerType="Top" />
+            <dxb:BarContainerControl x:Name="BottomContainer" DockPanel.Dock="Bottom" ContainerType="Bottom" />
+            <dxp:DocumentPreview x:Name="printPreview1" mod PrintingSystem="{Binding PrintingSystem}" />
+        </DockPanel>
+    </dxb:BarManager>
+</Window>
