@@ -1,0 +1,53 @@
+﻿<Window x:Class="GridPrint.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"
+        Title="Window1"
+        Width="1300"
+        Height="500"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="PageHeader">
+            <dxe:TextEdit Width="{Binding Path=UsablePageWidth,
+                                          Mode=OneWay}"
+                          HorizontalContentAlignment="Center"
+                          dxp:ExportSettings.TargetType="Text"
+                          Background="Gray"
+                          EditValue="Page Header" />
+        </DataTemplate>
+        <DataTemplate x:Key="PageFooter">
+            <dxe:TextEdit Width="{Binding Path=UsablePageWidth,
+                                          Mode=OneWay}"
+                          HorizontalContentAlignment="Center"
+                          dxp:ExportSettings.TargetType="PageNumber"
+                          dxp:PageNumberExportSettings.Format="Page {0} of {1}"
+                          dxp:PageNumberExportSettings.Kind="NumberOfTotal" />
+
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <dxg:GridControl Name="gridControl1" AutoExpandAllGroups="True">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Group" />
+                <dxg:GridColumn FieldName="Name" />
+                <dxg:GridColumn FieldName="Price" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.GroupSummary>
+                <dxg:GridSummaryItem DisplayFormat="Price: {0:c}"
+                                     FieldName="Price"
+                                     SummaryType="Sum" />
+            </dxg:GridControl.GroupSummary>
+            <dxg:GridControl.View>
+                <dxg:TableView />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <Button Grid.Row="1" Click="Button_Click">Print</Button>
+    </Grid>
+</Window>
