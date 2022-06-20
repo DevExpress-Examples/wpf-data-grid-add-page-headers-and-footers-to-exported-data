@@ -3,17 +3,49 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E2608)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
+# WPF Data Grid - Add Page Headers and Footers to Exported Data
+
+This example exports the [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl) with the specified page headers and footers.
+
+![image](https://user-images.githubusercontent.com/65009440/174618885-6e6885cc-3368-4fda-a43e-f75372172e77.png)
+
+## WYSIWYG Technique
+
+![image](https://user-images.githubusercontent.com/65009440/174618994-6110cfba-3621-4da1-9211-f7ec072ca0ba.png)
+
+1. Create custom templates for headers and footers.
+2. Create a new instance of the [PrintableControlLink](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.PrintableControlLink) class.
+3. Assign the templates to the [PageHeaderTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.TemplatedLink.PageHeaderTemplate) and [PageFooterTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.TemplatedLink.PageFooterTemplate) properties.
+4. Print or export the GridControl in WYSIWYG mode.
+
+Refer to the following help topic for more information: [WYSIWYG Export](https://docs.devexpress.com/WPF/118842/controls-and-libraries/data-grid/printing-and-exporting/wysiwyg-export).
+
+## Data-Aware Technique
+
+![image](https://user-images.githubusercontent.com/65009440/174619950-bd8c9ca8-1a81-42f5-8f78-fda570ebdcac.png)
+
+1. Create a new instance of the [XlsxExportOptionsEx](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx) class.
+2. Handle the [XlsxExportOptionsEx.CustomizeSheetHeader](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetHeader) and [XlsxExportOptionsEx.CustomizeSheetFooter](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetFooter) events.
+3. In the event handlers, specify custom page headers and footers.
+4. Export the GridControl in the **XLSX** format.
+
+Refer to the following help topic for more information: [Data-Aware Export](https://docs.devexpress.com/WPF/10018/controls-and-libraries/data-grid/printing-and-exporting/data-aware-export).
+
 <!-- default file list -->
-*Files to look at*:
+
+## Files to look at
 
 * [Window1.xaml](./CS/GridPrint/Window1.xaml) (VB: [Window1.xaml](./VB/GridPrint/Window1.xaml))
 * [Window1.xaml.cs](./CS/GridPrint/Window1.xaml.cs) (VB: [Window1.xaml.vb](./VB/GridPrint/Window1.xaml.vb))
+
 <!-- default file list end -->
-# How to create the print page header and footer when exporting the GridControl
 
+## Documentation
 
-<p>To accomplish this task, create a PrintableControlLink class instance based on the GridControl. After that, assign your custom templates to the PageHeader and PageFooter properties of the PrintableControlLink object.<br><br>See also: <a href="https://documentation.devexpress.com/WPF/115300/Common-Concepts/MVVM-Framework/Services/Predefined-Set/Report-Services/GridReportManagerService">GridReportManagerService</a>.</p>
+* [Printing and Exporting](https://docs.devexpress.com/WPF/117296/controls-and-libraries/data-grid/printing-and-exporting)
+* [Generate a Grid-Based Report](https://docs.devexpress.com/WPF/117300/controls-and-libraries/data-grid/printing-and-exporting/grid-based-report-generation)
 
-<br/>
+## More Examples
 
-
+* [WPF Data Grid - Customize the Print and Export Appearance](https://github.com/DevExpress-Examples/wpf-data-grid-customize-print-export-appearance)
+* [WPF Data Grid - Export to a Native Excel Table](https://github.com/DevExpress-Examples/how-to-export-the-gridcontrol-into-a-native-excel-table-t466541)
