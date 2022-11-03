@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # WPF Data Grid - Add Page Headers and Footers to Exported Data
 
-This example exports the [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl) with the specified page headers and footers.
+This example exports the contents of our WPF [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl) with specified page headers and footers.
 
 ![image](https://user-images.githubusercontent.com/65009440/174618885-6e6885cc-3368-4fda-a43e-f75372172e77.png)
 
@@ -16,7 +16,7 @@ This example exports the [GridControl](https://docs.devexpress.com/WPF/DevExpres
 1. Create custom templates for headers and footers.
 2. Create a new instance of the [PrintableControlLink](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.PrintableControlLink) class.
 3. Assign the templates to the [PageHeaderTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.TemplatedLink.PageHeaderTemplate) and [PageFooterTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.TemplatedLink.PageFooterTemplate) properties.
-4. Print or export the GridControl in WYSIWYG mode.
+4. Print or export the WPF GridControl in WYSIWYG mode.
 
 Refer to the following help topic for more information: [WYSIWYG Export](https://docs.devexpress.com/WPF/118842/controls-and-libraries/data-grid/printing-and-exporting/wysiwyg-export).
 
@@ -27,7 +27,7 @@ Refer to the following help topic for more information: [WYSIWYG Export](https:/
 1. Create a new instance of the [XlsxExportOptionsEx](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx) class.
 2. Handle the [XlsxExportOptionsEx.CustomizeSheetHeader](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetHeader) and [XlsxExportOptionsEx.CustomizeSheetFooter](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetFooter) events.
 3. In the event handlers, specify custom page headers and footers.
-4. Export the GridControl in the **XLSX** format.
+4. Export the WPF GridControl in **XLSX** format.
 
 Refer to the following help topic for more information: [Data-Aware Export](https://docs.devexpress.com/WPF/10018/controls-and-libraries/data-grid/printing-and-exporting/data-aware-export).
 
