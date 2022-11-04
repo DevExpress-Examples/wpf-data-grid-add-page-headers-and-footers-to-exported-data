@@ -25,7 +25,7 @@ Refer to the following help topic for more information: [WYSIWYG Export](https:/
 ![image](https://user-images.githubusercontent.com/65009440/174619950-bd8c9ca8-1a81-42f5-8f78-fda570ebdcac.png)
 
 1. Create a new instance of the [XlsxExportOptionsEx](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx) class.
-2. Handle the [XlsxExportOptionsEx.CustomizeSheetHeader](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetHeader) and [XlsxExportOptionsEx.CustomizeSheetFooter](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetFooter) events.
+2. Handle both [XlsxExportOptionsEx.CustomizeSheetHeader](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetHeader) and [XlsxExportOptionsEx.CustomizeSheetFooter](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.XlsxExportOptionsEx.CustomizeSheetFooter) events.
 3. In the event handlers, specify custom page headers and footers.
 4. Export the WPF GridControl in **XLSX** format.
 
