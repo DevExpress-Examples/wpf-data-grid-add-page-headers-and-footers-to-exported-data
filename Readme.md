@@ -51,7 +51,7 @@ Refer to the following help topic for more information: [Data-Aware Export](http
 * [WPF Data Grid - Customize the Print and Export Appearance](https://github.com/DevExpress-Examples/wpf-data-grid-customize-print-export-appearance)
 * [WPF Data Grid - Export to a Native Excel Table](https://github.com/DevExpress-Examples/how-to-export-the-gridcontrol-into-a-native-excel-table-t466541)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-add-page-headers-and-footers-to-exported-data&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-add-page-headers-and-footers-to-exported-data&~~~was_helpful=no)
 
